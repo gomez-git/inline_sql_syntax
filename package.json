@@ -26,17 +26,8 @@
         "inline"
     ],
     "activationEvents": [
-        "onLanguage:python",
-        "onLanguage:go",
         "onLanguage:javascript",
-        "onLanguage:typescript",
-        "onLanguage:java",
-        "onLanguage:ruby",
-        "onLanguage:csharp",
-        "onLanguage:rust",
-        "onLanguage:sql",
-        "onLanguage:php",
-        "onLanguage:lua"
+        "onLanguage:typescript"
     ],
     "main": "./out/extension.js",
     "browser": "./out/extension.js",
@@ -57,72 +48,8 @@
                 "path": "./syntaxes/highlight-sql-string.json",
                 "scopeName": "inline-sql.injection",
                 "injectTo": [
-                    "source.python",
-                    "source.java",
-                    "source.ruby",
-                    "source.cs",
                     "source.js",
-                    "source.ts",
-                    "source.vue",
-                    "source.svelte",
-                    "source.tsx",
-                    "source.rust",
-                    "text.html.php"
-                ],
-                "embeddedLanguages": {
-                    "meta.embedded.sql": "sql"
-                }
-            },
-            {
-                "path": "./syntaxes/php-multiline.json",
-                "scopeName": "php-multiline.injection",
-                "injectTo": [
-                    "text.html.php"
-                ],
-                "embeddedLanguages": {
-                    "meta.embedded.sql": "sql"
-                }
-            },
-            {
-                "path": "./syntaxes/c-sharp-multiline.json",
-                "scopeName": "c-sharp-multiline.injection",
-                "injectTo": [
-                    "source.cs"
-                ],
-                "embeddedLanguages": {
-                    "meta.embedded.sql": "sql"
-                }
-            },
-            {
-                "path": "./syntaxes/lua-multiline.json",
-                "scopeName": "lua-multiline.injection",
-                "injectTo": [
-                    "source.lua"
-                ],
-                "embeddedLanguages": {
-                    "meta.embedded.sql": "sql"
-                }
-            },
-            {
-                "path": "./syntaxes/es6_inline.json",
-                "scopeName": "es6_inline",
-                "injectTo": [
-                    "source.js",
-                    "source.js.jsx",
-                    "source.jsx",
-                    "source.ts",
-                    "source.tsx"
-                ],
-                "embeddedLanguages": {
-                    "meta.embedded.sql": "sql",
-                    "meta.template.expression.ts": "typescript"
-                }
-            },
-            {
-                "path": "./syntaxes/golang-multiline.json",
-                "scopeName": "golang-multiline.injection",
-                "injectTo": [
-                    "source.go"
+                    "source.ts"
                 ],
                 "embeddedLanguages": {
                     "meta.embedded.sql": "sql"

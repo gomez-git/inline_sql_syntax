@@ -66,20 +66,6 @@
             ]
         },
         {
-            "begin": "(?i)(\")(SELECT |INSERT INTO |DELETE |UPDATE |CREATE TABLE |CREATE INDEX )",
-            "beginCaptures": {
-                "2": {
-                    "name": "keyword.sql"
-                }
-            },
-            "end": "(\")",
-            "patterns": [
-                {
-                    "include": "source.sql"
-                }
-            ]
-        },
-        {
             "begin": "(`)(--\\s*sql)",
             "beginCaptures": {
                 "2": {
@@ -94,13 +80,13 @@
             ]
         },
         {
-            "begin": "(?i)(`)(SELECT |INSERT INTO |DELETE |UPDATE |CREATE TABLE |CREATE INDEX)",
+            "begin": "(\"|'|`)(WITH |SELECT[ \\n]|INSERT INTO |DELETE FROM |UPDATE |WHERE )",
             "beginCaptures": {
                 "2": {
                     "name": "keyword.sql"
                 }
             },
-            "end": "(`)",
+            "end": "(?<!\\\\)\\1",
             "patterns": [
                 {
                     "include": "source.sql"

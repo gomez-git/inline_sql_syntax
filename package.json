@@ -12,7 +12,7 @@
     },
     "homepage": "https://github.com/barklan/inline_sql_syntax",
     "engines": {
-        "vscode": "^1.63.0"
+        "vscode": "^1.88.0"
     },
     "categories": [
         "Linters",
@@ -41,6 +41,7 @@
     "main": "./out/extension.js",
     "browser": "./out/extension.js",
     "scripts": {
+        "install-extension": "npx vsce package && code --install-extension inline-sql-syntax-2.16.0.vsix",
         "vscode:prepublish": "npm run esbuild-base -- --minify",
         "esbuild-base": "esbuild ./src/extension.ts --bundle --outfile=out/main.js --external:vscode --external:pg-native --format=cjs --platform=node",
         "esbuild": "npm run esbuild-base -- --sourcemap",

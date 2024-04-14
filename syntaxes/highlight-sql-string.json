@@ -4,9 +4,7 @@
         "js",
         "ts"
     ],
-    "injectionSelector": [
-        "L:source -comment -string"
-    ],
+    "injectionSelector": "L:source -comment -string",
     "patterns": [
         {
             "begin": "(\"|'|`)(WITH |SELECT[ \\n]|INSERT INTO |DELETE FROM |UPDATE |WHERE )",

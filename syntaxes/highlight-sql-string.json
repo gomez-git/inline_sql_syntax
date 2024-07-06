@@ -7,7 +7,7 @@
     "injectionSelector": "L:source -comment -string",
     "patterns": [
         {
-            "begin": "(\"|'|`)(WITH |SELECT[ \\n]|INSERT INTO |DELETE FROM |UPDATE |WHERE |ALTER |CREATE |DROP )",
+            "begin": "(\"|'|`)(WITH |SELECT[ \\n]|INSERT INTO |DELETE FROM |UPDATE |WHERE |ALTER |CREATE |DROP |DO[ \\n])",
             "beginCaptures": {
                 "2": {
                     "name": "keyword.sql"
